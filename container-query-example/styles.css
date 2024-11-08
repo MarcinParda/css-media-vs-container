@@ -1,0 +1,61 @@
+/* Global Styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Page */
+.page {
+    display: flex;
+    height: 100vh;
+}
+
+/* Main Content */
+.main-content {
+    width: 75%;
+    padding: 20px;
+    box-sizing: border-box;
+    transition: width 0.3s;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 25%;
+    background-color: #f4f4f4;
+    padding: 20px;
+    box-sizing: border-box;
+    transition: width 0.3s;
+    container-type: inline-size;
+}
+
+.sidebar.expanded {
+    width: 100%;
+}
+
+.sidebar.expanded + .main-content {
+    display: none;
+}
+
+/* Sidebar Row */
+.sidebar-row {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Sidebar Box */
+.sidebar-box {
+    min-width: 100px;
+    background-color: #ccc;
+    margin-right: 10px;
+    margin-top: 10px;
+    box-sizing: border-box;
+}
+
+@container (min-width: 250px) {
+    .sidebar-row {
+        flex-direction: row;
+    }
+    .sidebar-box {
+        flex: 1;
+    }   
+}
